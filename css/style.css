@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/*font-family: "Josefin Sans", sans-serif;*/
+/*  font-family: "Lato", sans-serif;*/
+
+*,
+*:after,
+*:before{
+   --webkit-box-sizing:border-box;/* chrome,safari,ios*/
+   box-sizing:border-box;
+   margin: 0;
+   padding: 0; 
+}
+:active,
+:focus,
+:hover{
+   outline: 0 !important;
+   outline-offset: 0;
+}
+a,
+a:hover{
+   text-decoration: none;
+}
+a:hover{
+   color:var(--primary-color) !important;
+}
+ul,
+ol{
+   margin: 0;
+   padding: 0;
+}
+
+/*variable define*/
+:root{
+    --primary-color:#00CCFF;
+    --secondary-color:#73CBFD;
+    --white-color:#fff;
+    --bg1-color:#212D33;
+    --bg2-color:#1B212C;
+    --primary-font: "Josefin Sans", sans-serif;
+    --secondary-font:"Lato", sans-serif;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font: var(--secondary-font);
+    font:100%;
+    font-weight: 400;
+}
+ /*custom scrollbar*/
+ ::-webkit-scrollbar{
+    width: 0.625rem;
+  }
+  ::-webkit-scrollbar-track{
+    background: var(--white-color);
+  }
+  ::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+  }
+/*custom-css*/
+.wrapper{
+    padding-top: 8.25rem;
+    padding-bottom: 8.25rem;
+ }
+
+ h1{
+    font-size: 3.8rem;
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    font-weight: 900;
+    margin-bottom: 3rem;
+  }
+  h2{
+    font-size:1.5rem;
+    font-family: var(--secondary-font);
+    text-transform:capitalize;
+    color: var(--white-color);
+    line-height: 2.5rem;
+    letter-spacing:0.250rem;
+    font-weight:700;
+    margin-bottom: 3rem;
+  }
+  h4{
+   font-size:18px;
+   font-family: var(--secondary-font);
+   text-transform: capitalize;
+   color: var(--white-color);
+   font-weight:400;
+   margin-bottom:0.5rem;
+  }
+  h5{
+   font-family: var(--primary-font);
+   font-size:20px;
+   font-weight:700;
+  }
+  p{
+    font-size: 1rem;
+    font-family:var(--secondary-font);
+    color: var(--white-color);
+    font-weight: 500;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+ }
+ .text-content{
+    width: 70%;
+    margin: auto;
+ }
+
+ #return-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 13px;
+  top: 13px;
+  font-size:22px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+}
+#return-to-top:hover {
+  background:var(--secondary-color);
+}
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px;
+}
+ /*navigation*/
+ .navbar-wrapper.scroll-on{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background:var(--bg2-color);
+   box-shadow: 0 0.125rem 1.75rem 0 rgba(0,0,0,0.10);
+   transition: all .15s ease-in-out 0s;
+}
+ .navbar-wrapper{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    left: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+   }
+   .navbar-wrapper .navbar-brand{
+      padding-top:-0.5rem;
+     
+   }
+   .navbar-wrapper .nav-item{
+    padding: 0 0.625rem;
+    transition: all 200ms linear;
+   }
+   .navbar-toggler:focus{
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+   }
+   .navbar-toggler i{
+    color: var(--white-color);
+ }
+   .nav-link{
+    font-size:1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--white-color);
+    font-family: var(--secondary-font);
+   }
+
+   /*home -parallax*/
+   .parallax{
+    width: 100%;
+    background: url(../image/video-bg.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 16rem 0 15rem;
+   }
+   #about{
+      background:var(--bg1-color);
+   }
+   .about-section .color{
+      color: var(--primary-color);
+   }
+   #learn{
+      background:var(--bg1-color);
+   }
+.learn-section ul li{ 
+   font-size: 1rem;
+   color: var(--white-color);
+   font-family: var(--primary-font);
+   line-height: 32px;
+   position: relative;
+ }
+ .learn-section ul li::before{
+   position: absolute;
+   left: -2.1875rem;
+   color: var(--primary-color);
+   font-size: 1.25rem;
+   font-family: 'Font Awesome 5 Free';
+   content: "\f192";
+   display: inline-block;
+   padding-right: 3px;
+   vertical-align: middle;
+   font-weight: 900;
+ }
+
+ #pricing{
+   background:var(--bg2-color);
+ }
+ .pricing-section .card{
+   background: var(--secondary-color);
+   height:600px;
+ }
+ .pricing-section .price-box{
+  width: 28.125rem;
+ }
+ .pricing-section .card h1{
+   color: var(--white-color);
+   font-weight:600;
+   margin-bottom: 0;
+ }
+ .pricing-section .card h2{
+  margin-bottom:1.5rem;
+}
+ .pricing-section .card .btn{
+   background:var(--white-color);
+   padding: 0.6rem 1.5rem;
+   font-family:var(--primary-font);
+   border: none;
+   font-size: 1.2rem;
+   border:2px solid var(--white-color);
+   color: var(--primary-color);
+   font-weight:600;
+   box-shadow:none;
+   transition: all .4s ease-in-out;
+ }
+ .pricing-section .card .btn:hover{
+  background: transparent;
+  color: var(--white-color);
+ }
+ .pricing-section .card ul li{
+   font-size: 1.2rem;
+   color: var(--white-color);
+   font-family: var(--primary-font);
+   line-height: 32px;
+   position: relative;
+   margin-left: 30px;
+ }
+ .pricing-section .card ul li::before{
+   position: absolute;
+   color: var(--white-color);
+   font-size: 1.25rem;
+   left: -2.1875rem;
+   font-family: 'Font Awesome 5 Free';
+   content: "\f14a";
+   display: inline-block;
+   padding-right: 3px;
+   vertical-align: middle;
+   font-weight: 900;
+ }
+ #testimonial{
+   background: var(--bg1-color);
+ }
+ .testimonial-sec .carousel-item{
+   padding: 12rem 3.25rem;
+ }
+ .testimonial-sec  .carousel-caption p{
+   font-size: 1.1rem;
+   line-height:1.8rem;
+   color: var(--primary-color);
+   padding: 0 11%;
+   }
+ .testimonial-sec .carousel-caption img{
+   max-width: 6rem;
+   border-radius: 50%;
+   padding: 0.3125rem;
+   margin-bottom: 0.8125rem;
+ }
+ .testimonial-sec .carousel-caption h5{
+   font-weight: 600;
+ }
+ .testimonial-sec .carousel-indicators{
+   bottom: -1.8125rem;
+   }
+   .testimonial-sec .carousel-indicators [data-bs-target] {
+      background-color: var(--primary-color);
+   }
+ .testimonial-sec .carousel-indicators button{
+   width: 15px;
+   height: 15px;
+   outline: none;
+   border-radius: 50%;
+ }
+ .parallax-sec{
+   width: 100%;
+   background:url(../image/parallax-bg.jpg) no-repeat center;
+   background-size: cover;
+   background-attachment: fixed;
+   background-position: 0  71.9125px;
+   padding: 4.375rem 0;
+ }
+ .parallax-sec .card{
+   background: var(--secondary-color);
+ }
+ .parallax-sec .card h1{
+   color: var(--white-color);
+   margin-bottom:1rem;
+ }
+ #blog{
+   background: var(--bg2-color);
+ }
+ 
+ .blog-sec .card-text{
+   color:black;
+   font-family: var(--primary-font);
+   padding-top:1rem;
+   line-height: 1.5rem;
+   padding-bottom: 2.5rem;
+ }
+ .blog-sec .card-footer{
+   border: none;
+ }
+ .blog-sec .text-muted{
+   font-size: 1rem;
+   font-family: var(--secondary-font);
+ }
+#contact{
+   background: var(--bg1-color);
+}
+.contact-sec .form-control{
+   background: none;
+   border: none;
+   border-bottom: 1px solid var(--white-color);
+   font-size: 1.2rem;
+   color: var(--white-color);
+   opacity: 100%;
+   cursor: pointer;
+}
+.contact-sec .form-control:focus{
+   border-color: none;
+   outline-color: none;
+   box-shadow: none;
+}
+.contact-sec .form-btn{
+   padding: 0.8rem 2rem;
+   background: var(--primary-color);
+   border-radius:50px;
+   border: 3px solid var(--primary-color);
+   color: var(--white-color);
+   font-family: var(--primary-font);
+   transition: all .4s ease-in-out;
+}
+.contact-sec .form-btn:hover{
+   background: transparent;
+   color: var(--primary-color);
+}
+.contact-sec i{
+   font-size: 2rem;
+   color: var(--primary-color);
+   padding-right: 1.5rem;
+   cursor: pointer;
+}
+ #footer{
+   background: var(--bg2-color);
+ }

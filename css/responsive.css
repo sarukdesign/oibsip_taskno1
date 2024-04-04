@@ -1,0 +1,54 @@
+@media(max-width:1200px){
+}
+
+@media(max-width:991px){
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    .text-content{
+        width: 100%;
+    }
+    /*header*/
+    .navbar-wrapper .navbar-brand img{
+        height: 3.1825rem;
+    }
+    .navbar-wrapper {
+        text-align: left;
+    }
+    .navbar-wrapper .nav-link {
+      line-height: 1.875rem;
+    }
+    .pricing-section .price-box{
+        width: 22.125rem;
+       }
+       .pricing-section .card .btn{
+        padding: 0.3rem 1.2rem;
+        font-size: 1rem;
+    
+      }
+      .pricing-section .card ul li{
+        font-size: 1rem;
+        line-height: 32px;
+        margin-left: 30px;
+      }
+    
+    }
+@media(max-width:767px){
+    h1{
+        font-size:3rem;
+    }
+    h2{
+        font-size:1.5rem;
+        line-height: 2.0625rem;
+    }
+    .pricing-section .price-box{
+        width: 28.125rem;
+        margin-bottom: 1.5rem;
+       }
+       .testimonial-sec .carousel-item{
+        padding: 15rem 3.25rem;
+      }
+}
